@@ -28,3 +28,9 @@ The report result can be found after executing the program, you can follow one o
 - execute the gherkin feature file
 
 The report will appear in the "report" folder. The reports contain .html and .json files
+
+## Setup and Configuration
+
+- Clone this repository
+- Run the gradle.build file for setup
+- Type "./gradlew cucumber" in terminal
