@@ -1,7 +1,7 @@
 ## Dependencies and notes
 Note:
 
-make sure "Cucumber for java" and "Gherkin" plugin are downloaded and activated by click ctrl + alt + s and then click the "plugins" at gradle.build file
+make sure "Cucumber for java" and "Gherkin" plugin are downloaded and activated by click ctrl + alt + s and then click the "plugins" menu (if you're using inteliJ) or by adding the maven script at gradle.build file
 
 This project requires the following dependencies:
 
