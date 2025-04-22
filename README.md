@@ -38,14 +38,21 @@ The report will appear in the "report" folder. The reports contain .html and .js
 ## Feature file example
 
 @login
+
 Feature: Login
 
   @valid-login
+  
   Scenario: Login with correct username and password. Expectation: user will redirect to home page
+  
     Given user in on the login page
+    
     And user input username text box with "standard_user"
+    
     And User input password text box with "secret_sauce"
+    
     When user click login button
+    
     Then user will redirect to the home page
 
 ## Page Object Class example
