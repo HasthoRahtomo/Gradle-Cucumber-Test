@@ -44,6 +44,11 @@ jobs:
         name: Cucumber Test Report
         path: reports
 
+    # rename reportHTML to index in gh branch
+    - name: Rename Test Report to index.html
+      run: |
+        mv test-reportHTML.html index.html
+    
     # deploy to github pages
     - name: GitHub Pages action
       if: always()
