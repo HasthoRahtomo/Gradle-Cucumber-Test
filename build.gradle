@@ -50,7 +50,7 @@ tasks.register('cucumber') {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                    '--plugin', 'html:reports/reportAll.html',
+                    '--plugin', 'html:reports/index.html',
                     '--plugin', 'html:reports/reportAll.json',
                     '--plugin', 'pretty',
                     '--glue', 'cucumber',
