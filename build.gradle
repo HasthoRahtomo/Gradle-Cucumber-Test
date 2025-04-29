@@ -50,12 +50,50 @@ tasks.register('cucumber') {
             main = "io.cucumber.core.cli.Main"
             classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
             args = [
-                    '--plugin', 'html:reports/test-reportHTML.html',
-                    '--plugin', 'html:reports/test-reportJSON.json',
+                    '--plugin', 'html:reports/reportAll.html',
+                    '--plugin', 'html:reports/reportAll.json',
                     '--plugin', 'pretty',
                     '--glue', 'cucumber',
                     '--tags', "${tags}",
                     'src/test/resources'
+            ]
+        }
+    }
+}
+
+tasks.register('cucumberWeb') {
+    description("Running Cucumber Test")
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'html:reports/reportWeb.html',
+                    '--plugin', 'html:reports/reportWeb.json',
+                    '--plugin', 'pretty',
+                    '--glue', 'cucumber',
+                    '--tags', "${tags}",
+                    'src/test/resources/login.feature'
+            ]
+        }
+    }
+}
+
+tasks.register('cucumberAPI') {
+    description("Running Cucumber Test")
+    dependsOn assemble, compileTestJava
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = [
+                    '--plugin', 'html:reports/reportAPI.html',
+                    '--plugin', 'html:reports/reportAPI.json',
+                    '--plugin', 'pretty',
+                    '--glue', 'cucumber',
+                    '--tags', "${tags}",
+                    'src/test/resources/getUser.feature'
             ]
         }
     }

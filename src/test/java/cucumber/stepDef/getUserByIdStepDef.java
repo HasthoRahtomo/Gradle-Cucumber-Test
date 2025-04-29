@@ -28,4 +28,9 @@ public class getUserByIdStepDef {
     public void theResponseStatusCodeShouldBe(int response) {
         code.responseCheck(response);
     }
+
+    @And("I put api key {string}")
+    public void iPutApiKey(String apiKey) {
+        code.setAPIKey(apiKey);
+    }
 }
