@@ -47,7 +47,7 @@ jobs:
     # rename reportHTML to index in gh branch
     - name: Rename Test Report to index.html
       run: |
-        mv ./reports/test-reportHTML.html ./reports/index.html
+        mv ./reports/reportAll.html ./reports/index.html
     
     # deploy to github pages
     - name: GitHub Pages action
