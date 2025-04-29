@@ -18,6 +18,15 @@ dependencies {
     testImplementation 'io.cucumber:cucumber-java:7.8.1'
     testImplementation 'io.cucumber:cucumber-junit:7.8.1'
 
+    // https://mvnrepository.com/artifact/org.testng/testng
+    testImplementation("org.testng:testng:7.7.1")
+
+    // https://mvnrepository.com/artifact/org.json/json
+    implementation("org.json:json:20250107")
+
+    // https://mvnrepository.com/artifact/io.rest-assured/rest-assured
+    testImplementation("io.rest-assured:rest-assured:5.5.1")
+
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }
