@@ -1,4 +1,4 @@
-name: Web Automation Workflow
+name: Web + API Automation Workflow
 
 on:
   push:
